@@ -1,0 +1,41 @@
+body{
+  font-family: sans-serif;
+}
+
+.error-container{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.error-content{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255);
+text-align: center;
+}
+
+.submit{
+  background-color: rgb(145, 41, 62);
+  color:white;
+  font-size: 15px;
+  opacity: .7;
+  transition: opacity .3s ease;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+.error-content h1{
+  font-size:40px;
+}
+
+.error-content h3{
+  font-size: 30px;
+}
+
+.error-content h5{
+  font-size: 15px;
+  font-weight: 100;
+}
+
