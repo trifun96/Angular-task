@@ -8,8 +8,8 @@ const routes: Routes = [
   {
     path: '', component: AdminDashboardComponent,
     children: [
-      { path: 'products-detail', component: ProductsDetailComponent },
-      { path: '', redirectTo: '/admin/products-detail', pathMatch: 'full' },
+      { path: 'products', component: ProductsDetailComponent },
+      { path: '', redirectTo: '/admin/products', pathMatch: 'full' },
     ],
   },
 ];

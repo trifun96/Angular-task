@@ -8,8 +8,10 @@ import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+
   { path: 'forgot/password', component: ForgotPasswordComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', loadChildren: () => import('./modules/products/products.module').then((m) => m.ProductsModule) },
   { path: 'admin', canActivate: [AuthGuard], loadChildren: () => import('./modules/admin/admin.module').then((m) => m.AdminModule) },
   { path: '**', component: ErrorPageComponent },
 
