@@ -1,25 +1,18 @@
-<section class="modal-bg">
-  <div class="modal-content">
-    <div (click)="closeButton()" class="modal-close">
-      <img src="/assets/images/close.png" />
+<app-shared-modal (closeEvent)="closeButton()">
+  <div class="product-content">
+    <div class="product-img">
+      <img src="{{ data.image }}" />
     </div>
-    <div class="product-content">
-      <div class="product-img">
-        <img src="{{ data.image }}" />
+    <div class="product-info">
+      <h1>{{ data.title }}</h1>
+      <p>Price: {{ data.price }}$.</p>
+      &starf; &starf; &starf; &starf; &star;
+      <div class="description">
+        <p>{{ data.description }}</p>
+        <p>Quantity: {{ data.quantity }}.</p>
       </div>
-      <div class="product-info">
-        <h1>{{ data.title }}</h1>
-        <p>Price: {{ data.price }}$.</p>
-        &starf; &starf; &starf; &starf; &star;
-        <div class="description">
-          <p>{{ data.description }}</p>
-          <p>Quantity: {{ data.quantity }}.</p>
-        </div>
-        <button (click)="addProduct()" class="add-to-cart">Add to Cart</button>
-        <button (click)="saveProduct()" class="save-product">
-          Save Product
-        </button>
-      </div>
+      <button (click)="addProduct()" class="add-to-cart">Add to Cart</button>
+      <button (click)="saveProduct()" class="save-product">Save Product</button>
     </div>
   </div>
-</section>
+</app-shared-modal>

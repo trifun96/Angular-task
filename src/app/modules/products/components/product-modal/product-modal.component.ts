@@ -2,6 +2,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Products } from 'src/app/products';
 import { Output, EventEmitter } from '@angular/core';
+import { ToastrService } from 'ngx-toastr'
 
 @Component({
   selector: 'app-product-modal',
@@ -14,7 +15,7 @@ export class ProductModalComponent implements OnInit {
 
   @Output() closeEvent = new EventEmitter<boolean>();
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -24,10 +25,10 @@ export class ProductModalComponent implements OnInit {
   }
 
   addProduct() {
-    alert('Product is add to cart!')
+    this.toastr.success('Your product added successfuly')
   }
 
   saveProduct() {
-    alert('Product is saved!')
+    this.toastr.success('Your product saved successfuly!')
   }
 }

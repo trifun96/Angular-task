@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/app/products';
 import { ProductService } from 'src/app/service.products';
+import { ApiService } from 'src/app/shared/api.service';
 
 @Component({
   selector: 'app-products-list',
@@ -8,19 +9,25 @@ import { ProductService } from 'src/app/service.products';
   styleUrls: ['./products-list.component.scss']
 })
 export class ProductsListComponent implements OnInit {
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,
+    private api: ApiService
+  ) {
 
   }
   search: string = '';
-  products: Products[] = [];
   filterProducts: Products[] = []
   openModal: boolean = false;
   selectedProduct: Products = null;
+  productsData: any;
 
 
 
-  getProducts(): void {
-    this.productService.getProducts().subscribe(products => { this.products = products; this.filterProducts = products });
+
+  getAllProducts(): void {
+    this.api.getProducts()
+      .subscribe(res => {
+        this.productsData = res; this.filterProducts = res
+      });
   }
 
   onProductClick(product: Products): void {
@@ -28,7 +35,8 @@ export class ProductsListComponent implements OnInit {
     this.selectedProduct = product;
   }
   ngOnInit(): void {
-    this.getProducts()
+
+    this.getAllProducts()
   }
 
   onCloseModal(event: boolean) {
@@ -38,6 +46,8 @@ export class ProductsListComponent implements OnInit {
 
   onSearch(newValue: string) {
     this.search = newValue;
-    this.products = this.filterProducts.filter(elements => elements.title.toLowerCase().includes(newValue.toLowerCase()));
+    this.productsData = this.filterProducts.filter(elements => elements.title.toLowerCase().includes(newValue.toLowerCase()));
+
+
   }
 }

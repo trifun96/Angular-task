@@ -1,7 +1,7 @@
 .container{
   max-width: 1100px;
   margin: 0 auto;
-  padding: 30px 20px;
+  padding: 60px 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -9,15 +9,18 @@
 
 }
 
+
+
+
 .product-card{
   text-align: center;
   padding: 0px 0px 0px;
-  background-color: white;
-  box-shadow: 0 .50px 10px rgba(0,0,0,.1);
+  background-color: rgb(244, 235, 235);
+  box-shadow: 0 .50px 10px rgba(255, 255, 255, 0.1);
   text-decoration: none;
   list-style-type: none;
   cursor: pointer;
-  border-radius: 5px;
+  color: rgb(17, 16, 16);
 
 
 }
@@ -26,15 +29,18 @@
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);;
 }
 
+
+
 p{
-  font-size: 18px;
+  font-size: 15px;
   font-family:sans-serif;
   padding: 30px;
 }
 
 h5{
   font-family: sans-serif;
-  font-size: 15px;
+  font-size: 17px;
+  margin-top: 30px;
 }
 
 .button{
@@ -58,6 +64,8 @@ input[type=text] {
 }
 
 
+
 .products-container {
   position: relative;
+
 }

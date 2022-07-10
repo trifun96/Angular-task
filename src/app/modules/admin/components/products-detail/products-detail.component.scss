@@ -5,9 +5,10 @@ body{
 
 
 .container{
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 30px 20px;
+  width: 100%;
+  padding: 60px 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -15,123 +16,10 @@ body{
 
 }
 
-.product-card{
-  text-align: center;
-  padding: 0px 0px 0px;
-  background-color: white;
-  box-shadow: 0 .50px 10px rgba(0,0,0,.1);
-  text-decoration: none;
-  list-style-type: none;
-  border-radius: 5px;
-
-
-}
-
-.product-card:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);;
-}
-
-p{
-  font-size: 18px;
-  font-family:sans-serif;
-  padding: 30px;
-}
-
-h5{
-  font-family: sans-serif;
-  font-size: 15px;
-}
-
-
-.edit{
-  background-color: #0095ff;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.15385;
-  margin: 0;
-  outline: none;
-  padding: 8px 26px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  white-space: nowrap;
-  margin: 20px;
-
-
-}
-
-.edit :hover,
-.edit :focus {
-  background-color: #07c;
-}
-
-.edit :focus {
-  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
-}
-
-.edit :active {
-  background-color: #0064bd;
-  box-shadow: none;
-}
-
-
-.delete{
-  background-color: #0095ff;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
-  box-sizing: border-box;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.15385;
-  margin: 0;
-  outline: none;
-  padding: 8px .8em;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  white-space: nowrap;
-
-}
-
-.delete :hover,
-.delete :focus {
-  background-color: #07c;
-}
-
-.delete :focus {
-  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
-}
-
-.delete :active {
-  background-color: #0064bd;
-  box-shadow: none;
-}
-
 .button{
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 40px;
 
 }
 
@@ -159,6 +47,35 @@ h5{
   touch-action: manipulation;
   vertical-align: baseline;
   white-space: nowrap;
+}
+
+
+.product-image {
+  width: 250px;
+  height: 250px;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+x
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+
+}
+
+
+
+.table-button{
+  cursor: pointer;
+  display: flex;
+}
+
+.button-flex{
+  display: flex;
 }
 
 

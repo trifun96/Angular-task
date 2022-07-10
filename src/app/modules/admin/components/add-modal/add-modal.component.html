@@ -1,0 +1,100 @@
+<form [formGroup]="profileForm" (ngSubmit)="submitModal()">
+  <h1 *ngIf="!isEdit">Add Product</h1>
+  <h1 *ngIf="isEdit">Edit Product</h1>
+  <div class="control">
+    <div>
+      <input
+        type="file"
+        name="image"
+        id="upload-file"
+        (change)="onSelectFile($event)"
+        id="image"
+        placeholder="Photo"
+        formControlName="image"
+      />
+      <img
+        id="upload-file"
+        [src]="!previewImage ? url : previewImage"
+        class="preview-image"
+        alt="Preview Image"
+        title="Preview Image"
+      />
+    </div>
+  </div>
+  <div class="control">
+    <label for="title">Title</label>
+    <input
+      type="text"
+      name="title"
+      class="input"
+      id="title"
+      placeholder="Title"
+      formControlName="title"
+      required=""
+    />
+  </div>
+  <div class="control">
+    <label for="description">Description</label>
+    <input
+      type="text"
+      name="description"
+      class="input"
+      id="description"
+      placeholder="Description"
+      formControlName="description"
+    />
+    <small
+      *ngIf="
+        profileForm.get('description').invalid &&
+        profileForm.get('description').touched
+      "
+      class="danger-title"
+      >Description are required</small
+    >
+  </div>
+  <div class="control">
+    <label for="quantity">Quantity</label>
+    <input
+      type="number"
+      id="quantity"
+      class="input"
+      name="quantity"
+      min="1"
+      max="10000"
+      formControlName="quantity"
+    />
+    <small
+      *ngIf="
+        profileForm.get('quantity').invalid &&
+        profileForm.get('quantity').touched
+      "
+      class="danger-title"
+      >Quantity are required</small
+    >
+  </div>
+  <div class="control">
+    <label for="price">Price</label>
+    <input
+      type="number"
+      id="price"
+      name="price"
+      class="input"
+      min="1"
+      max="10000"
+      formControlName="price"
+    />
+    <small
+      *ngIf="
+        profileForm.get('price').invalid && profileForm.get('price').touched
+      "
+      class="danger-title"
+      >Price are required</small
+    >
+  </div>
+  <div class="control">
+    <button (click)="postProductsDetails()" type="submit" class="submit-button">
+      <div *ngIf="isEdit">Update Product</div>
+      <div *ngIf="!isEdit">Add Product</div>
+    </button>
+  </div>
+</form>

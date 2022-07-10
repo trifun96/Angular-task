@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FooterComponent } from './footer.component';
+import { ShearedHeaderComponent } from './sheared-header.component';
 
-describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
+describe('ShearedHeaderComponent', () => {
+  let component: ShearedHeaderComponent;
+  let fixture: ComponentFixture<ShearedHeaderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FooterComponent ]
+      declarations: [ ShearedHeaderComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(FooterComponent);
+    fixture = TestBed.createComponent(ShearedHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

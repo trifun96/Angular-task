@@ -2,6 +2,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { ToastrService } from 'ngx-toastr'
+
 
 
 @Component({
@@ -19,7 +21,7 @@ export class LoginComponent implements OnInit {
   })
 
 
-  constructor(private auth: AuthService, private router: Router) {
+  constructor(private auth: AuthService, private router: Router, private toastr: ToastrService) {
 
   }
 
@@ -34,9 +36,10 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       this.auth.login(this.loginForm.value).subscribe((result) => {
         this.router.navigate(['admin'])
+        this.toastr.success('You are logged in successfuly!')
       },
         (err: Error) => {
-          alert(err.message)
+          this.toastr.error('Something Went wrong!', 'Please fill in the fields.')
         }
       )
     }
