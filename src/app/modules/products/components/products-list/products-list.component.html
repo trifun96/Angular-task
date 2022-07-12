@@ -17,11 +17,14 @@
     >
       <ul class="product-card">
         <li>
-          <img src="{{ product.image }}" style="max-width: 250px" />
+          <img src="{{ product.image }}" />
           <h5>{{ product.title }}</h5>
           <p>Price:{{ product.price }}$</p>
         </li>
       </ul>
+    </div>
+    <div class="no-item" *ngIf="">
+      <p>No data items</p>
     </div>
   </div>
 
@@ -32,3 +35,4 @@
     ></app-product-modal>
   </div>
 </div>
+<app-sheared-footer></app-sheared-footer>
