@@ -1,8 +1,5 @@
 <div class="button">
-  <button (click)="openProductModal()">
-    <mat-icon>add</mat-icon>
-    Add Product
-  </button>
+  <button (click)="openProductModal()">Add Product</button>
 </div>
 <div class="container">
   <mat-form-field appearance="standard">
@@ -48,10 +45,10 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
         <td mat-cell *matCellDef="let row">
           <div class="button-flex">
-            <button (click)="editProduct(row)" mat-icon-button color="primary">
+            <button (click)="editProduct(row)" mat-icon-button color="warn">
               <mat-icon>edit</mat-icon>
             </button>
-            <button (click)="deleteProducts(row)" mat-icon-button color="warn">
+            <button (click)="deleteProducts(row)" mat-icon-button color="green">
               <mat-icon>delete</mat-icon>
             </button>
           </div>

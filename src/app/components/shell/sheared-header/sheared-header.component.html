@@ -1,12 +1,13 @@
 <div class="header">
   <div class="header-container">
-    <a routerLink="/admin/products" class="logo">
+    <a class="logo">
       <div *ngIf="isLoggedIn">ADMIN PAGE</div>
       <div *ngIf="!isLoggedIn">USER PAGE</div>
     </a>
+
     <div *ngIf="isLoggedIn" class="header-right">
-      <a class="logout" routerLinkActive="active" (click)="logout()">Logout</a>
       <a routerLink="/products/list" routerLinkActive="active">Product List</a>
+      <a class="logout" routerLinkActive="active" (click)="logout()">Logout</a>
     </div>
     <div *ngIf="!isLoggedIn" class="header-right">
       <a [routerLink]="['/login']" routerLinkActive="active">Admin</a>

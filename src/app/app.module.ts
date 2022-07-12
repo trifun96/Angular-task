@@ -6,6 +6,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +17,8 @@ import { AppComponent } from './app.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { LoginComponent } from './components/login/login.component';
+import { SharedModule } from './shared.module';
+
 
 @NgModule({
   declarations: [
@@ -23,8 +28,10 @@ import { LoginComponent } from './components/login/login.component';
     LoginComponent,
 
 
+
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -32,7 +39,9 @@ import { LoginComponent } from './components/login/login.component';
     FontAwesomeModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    MatProgressSpinnerModule,
+
 
   ],
   providers: [],

@@ -11,6 +11,7 @@ export class ShearedHeaderComponent implements OnInit {
 
   isLoggedIn: boolean;
 
+
   ngOnInit(): void {
     this.isLoggedIn = this.auth.isLoggedIn();
   }

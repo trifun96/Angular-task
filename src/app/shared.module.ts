@@ -6,10 +6,12 @@ import { SharedModalComponent } from './components/shell/shared-modal/shared-mod
 import { ShearedFooterComponent } from './components/shell/sheared-footer/sheared-footer.component';
 import { ShearedHeaderComponent } from './components/shell/sheared-header/sheared-header.component';
 
+
 @NgModule({
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule,],
   declarations: [ShearedHeaderComponent, ShearedFooterComponent, SharedModalComponent],
   exports: [ShearedHeaderComponent, ShearedFooterComponent, SharedModalComponent,
     CommonModule, FormsModule, RouterModule]
 })
 export class SharedModule { }
+

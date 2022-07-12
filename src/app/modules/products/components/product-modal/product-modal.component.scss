@@ -18,13 +18,13 @@ max-width: 400px;
 }
 
 .product-info h1{
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 500;
 
 }
 
 .product-info p{
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .product-info .add-to-cart{
@@ -65,11 +65,28 @@ background-color: rgb(66, 61, 61);
 
 }
 .description{
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 768px){
+  .product-content{
+    float: none;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 
-}
+
+  }
+
+
+
+  }
+
+  .product-img img{
+    max-width: 300px;
+
+    }
+
 

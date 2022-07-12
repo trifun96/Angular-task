@@ -13,6 +13,7 @@ import { MatSortModule } from '@angular/material/sort';
 
 
 
+
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
 import { ProductsDetailComponent } from './components/products-detail/products-detail.component';
@@ -51,7 +52,8 @@ import { SharedModule } from 'src/app/shared.module';
     MatButtonModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+
   ]
 })
 export class AdminModule { }

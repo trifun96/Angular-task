@@ -30,7 +30,6 @@
       id="title"
       placeholder="Title"
       formControlName="title"
-      required=""
     />
   </div>
   <div class="control">
@@ -43,14 +42,6 @@
       placeholder="Description"
       formControlName="description"
     />
-    <small
-      *ngIf="
-        profileForm.get('description').invalid &&
-        profileForm.get('description').touched
-      "
-      class="danger-title"
-      >Description are required</small
-    >
   </div>
   <div class="control">
     <label for="quantity">Quantity</label>
@@ -63,14 +54,6 @@
       max="10000"
       formControlName="quantity"
     />
-    <small
-      *ngIf="
-        profileForm.get('quantity').invalid &&
-        profileForm.get('quantity').touched
-      "
-      class="danger-title"
-      >Quantity are required</small
-    >
   </div>
   <div class="control">
     <label for="price">Price</label>
@@ -83,13 +66,6 @@
       max="10000"
       formControlName="price"
     />
-    <small
-      *ngIf="
-        profileForm.get('price').invalid && profileForm.get('price').touched
-      "
-      class="danger-title"
-      >Price are required</small
-    >
   </div>
   <div class="control">
     <button (click)="postProductsDetails()" type="submit" class="submit-button">

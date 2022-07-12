@@ -5,10 +5,10 @@ body{
 
 
 .container{
-  max-width: 1300px;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
-  padding: 60px 20px;
+  padding: 100px 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -17,7 +17,7 @@ body{
 }
 
 .button{
-  max-width: 1300px;
+  max-width: 1100px;
   margin: 0 auto;
   margin-top: 40px;
 
@@ -78,5 +78,20 @@ x
   display: flex;
 }
 
+@media (min-width: 1025px) and (max-width: 1280px){
+  .button {
+     margin-left: 30px;
+}
 
-
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .button {
+      margin-left: 30px;
+  }
+}
+    /* Media Query for Tablets Ipads portrait mode */
+    @media (min-width: 768px) and (max-width: 1024px){
+      .button{
+     margin-left: 30px;
+      }
+  }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/app/products';
 import { ProductService } from 'src/app/service.products';
+import { AuthService } from 'src/app/services/auth.service';
 import { ApiService } from 'src/app/shared/api.service';
 
 @Component({
@@ -10,7 +11,7 @@ import { ApiService } from 'src/app/shared/api.service';
 })
 export class ProductsListComponent implements OnInit {
   constructor(private productService: ProductService,
-    private api: ApiService
+    private api: ApiService, private auth: AuthService
   ) {
 
   }
@@ -19,6 +20,7 @@ export class ProductsListComponent implements OnInit {
   openModal: boolean = false;
   selectedProduct: Products = null;
   productsData: any;
+  isLoggedIn: boolean
 
 
 
@@ -30,13 +32,16 @@ export class ProductsListComponent implements OnInit {
       });
   }
 
+
+
   onProductClick(product: Products): void {
     this.openModal = true;
     this.selectedProduct = product;
   }
   ngOnInit(): void {
-
+    this.isLoggedIn = this.auth.isLoggedIn();
     this.getAllProducts()
+
   }
 
   onCloseModal(event: boolean) {
@@ -50,4 +55,6 @@ export class ProductsListComponent implements OnInit {
 
 
   }
+
+
 }

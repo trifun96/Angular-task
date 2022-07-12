@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from 'src/app/shared/api.service';
 import { Products } from 'src/app/products';
 import { ToastrService } from 'ngx-toastr';
-import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -32,7 +31,7 @@ export class ProductsDetailComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(private api: ApiService,
-    private toastr: ToastrService, private dialog: MatDialog,) { }
+    private toastr: ToastrService) { }
 
 
   ngOnInit(): void {
